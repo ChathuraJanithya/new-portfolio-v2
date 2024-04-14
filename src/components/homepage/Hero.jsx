@@ -1,46 +1,35 @@
 import React from "react";
-import { Button, Link } from "@nextui-org/react";
-import { Typography } from "../common/Typography";
+import { Hero } from "@/components/common/Hero";
+import { TypewriterEffect } from "../common/TypewriterEffect";
 
-function Hero() {
+const words = [
+  {
+    text: "Build",
+  },
+  {
+    text: "awesome",
+  },
+  {
+    text: "apps",
+  },
+  {
+    text: "with",
+  },
+  {
+    text: "Aceternity.",
+    className: "text-blue-500 dark:text-blue-500",
+  },
+];
+
+export function WavyBackgroundHero() {
   return (
-    <div className="relative h-screen ">
-      <img
-        src="/assets/homepage/heroimg.jpeg"
-        className="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover "
-      ></img>
-
-      <div className="mx-auto h-screen backdrop-brightness-[0.8]">
-        <div className="relative z-[9999] mx-auto flex h-full max-w-[1440px]  lg:px-4  2xl:px-0">
-          <div className="mt-[175px] grid  h-full grid-cols-1 items-center md:mt-[205px] lg:mt-[143px] lg:grid-cols-2">
-            <div className="bg-gradient-to-r from-emerald-500 via-30% to-sky-500 to-90% p-8 md:w-full  lg:max-w-[660px]">
-              <Typography
-                variant="title"
-                displayAs="h1"
-                className="animate-typing text-left text-white "
-              >
-                Chathura Janithya
-              </Typography>
-
-              <div className="mt-6 flex gap-2 sm:mt-6 md:gap-4">
-                <Link href="/contact-us">
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    size="lg"
-                    radius="none"
-                    className="bg-[#F28D35] px-4 py-3 font-semibold uppercase text-white md:px-4 md:py-2"
-                  >
-                    get free consultations
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Hero className="mx-auto max-w-4xl pb-40">
+      <p className="inter-var text-center text-2xl font-bold text-white md:text-4xl lg:text-7xl">
+        Welcome
+      </p>
+      <p className="inter-var mt-4 text-center text-base font-normal text-white md:text-lg">
+        <TypewriterEffect words={words} />
+      </p>
+    </Hero>
   );
 }
-
-export default Hero;
