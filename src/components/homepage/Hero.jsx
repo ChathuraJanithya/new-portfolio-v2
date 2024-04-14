@@ -2,10 +2,7 @@ import React from "react";
 import { Button, Link } from "@nextui-org/react";
 import { Typography } from "../common/Typography";
 
-
 function Hero() {
- 
-
   return (
     <div className="relative h-screen ">
       <img
@@ -21,10 +18,7 @@ function Hero() {
                 variant="title"
                 displayAs="h1"
                 className="text-left text-white "
-              >
-                We Crush Your Competitors, Goals, And Sales Records - Without
-                The B.S.
-              </Typography>
+              ></Typography>
 
               <div className="mt-6 flex gap-2 sm:mt-6 md:gap-4">
                 <Link href="/contact-us">
