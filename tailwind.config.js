@@ -35,10 +35,28 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "white",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
       },
       fontFamily: {
         archivo: ["var(--font-archivo)", ...fontFamily.sans],
@@ -59,7 +77,8 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate", require("@tailwindcss/typography")),
-    require("@tailwindcss/aspect-ratio"), require('tailwind-scrollbar'),
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwind-scrollbar"),
     nextui(),
   ],
 };

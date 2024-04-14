@@ -17,8 +17,10 @@ function Hero() {
               <Typography
                 variant="title"
                 displayAs="h1"
-                className="text-left text-white "
-              ></Typography>
+                className="animate-typing text-left text-white "
+              >
+                Chathura Janithya
+              </Typography>
 
               <div className="mt-6 flex gap-2 sm:mt-6 md:gap-4">
                 <Link href="/contact-us">
@@ -29,7 +31,7 @@ function Hero() {
                     radius="none"
                     className="bg-[#F28D35] px-4 py-3 font-semibold uppercase text-white md:px-4 md:py-2"
                   >
-                    get free consultation
+                    get free consultations
                   </Button>
                 </Link>
               </div>
